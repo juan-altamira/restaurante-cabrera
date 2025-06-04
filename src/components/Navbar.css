@@ -1,0 +1,211 @@
+/* Estilos base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Topbar */
+.topbar {
+  background-color: #222;
+  color: #fff;
+  padding: 0.5rem 0;
+  font-size: 0.9rem;
+}
+
+.topbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contact-info {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  color: #ddd;
+}
+
+.icon {
+  font-size: 0.9em;
+}
+
+.separator {
+  color: #555;
+  margin: 0 0.5rem;
+}
+
+.language-switch {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  cursor: pointer;
+}
+
+/* Navbar principal */
+.navbar {
+  background-color: #000;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  height: 40px;
+  width: auto;
+}
+
+/* Menú de navegación */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #d2226e;
+}
+
+/* Botón de reserva */
+.book-button {
+  background-color: #d2226e;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 25px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.book-button:hover {
+  background-color: #b01a5c;
+  transform: translateY(-2px);
+}
+
+/* Botón de menú móvil */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Estilos para móvil */
+.mobile-booking {
+  display: none;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .topbar {
+    font-size: 0.8rem;
+  }
+  
+  .contact-info {
+    gap: 0.5rem;
+  }
+  
+  .separator {
+    margin: 0 0.3rem;
+  }
+  
+  .menu-toggle {
+    display: block;
+  }
+  
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #111;
+    flex-direction: column;
+    padding: 1rem 0;
+    gap: 0;
+  }
+  
+  .nav-links.active {
+    display: flex;
+  }
+  
+  .nav-links li {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .nav-links a {
+    display: block;
+    padding: 0.8rem 1rem;
+  }
+  
+  .mobile-booking {
+    display: block;
+    padding: 1rem;
+  }
+  
+  .desktop-booking {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .topbar {
+    font-size: 0.7rem;
+  }
+  
+  .topbar-container {
+    flex-direction: column;
+    gap: 0.3rem;
+    padding: 0.5rem 1rem;
+  }
+  
+  .contact-info {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .separator {
+    display: none;
+  }
+  
+  .logo-img {
+    height: 35px;
+  }
+}

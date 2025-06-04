@@ -1,0 +1,143 @@
+.menu-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 1rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.menu-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.menu-header h1 {
+  font-size: 2.5rem;
+  color: #222;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.menu-subtitle {
+  font-size: 1.2rem;
+  color: #777;
+  font-style: italic;
+}
+
+.menu-sections {
+  margin-bottom: 4rem;
+}
+
+.menu-section {
+  margin-bottom: 3.5rem;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  color: #d2226e;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.menu-items {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 1rem 0;
+  border-bottom: 1px dashed #e0e0e0;
+  transition: transform 0.3s ease;
+}
+
+.menu-item:hover {
+  transform: translateX(10px);
+}
+
+.item-info h3 {
+  font-size: 1.1rem;
+  color: #333;
+  margin: 0 0 0.5rem 0;
+  font-weight: 600;
+}
+
+.item-description {
+  color: #777;
+  font-size: 0.9rem;
+  margin: 0;
+  line-height: 1.5;
+  max-width: 80%;
+}
+
+.item-price {
+  font-weight: 700;
+  color: #d2226e;
+  font-size: 1.1rem;
+  white-space: nowrap;
+  margin-left: 1rem;
+}
+
+.menu-footer {
+  text-align: center;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 2px solid #f0f0f0;
+}
+
+.menu-footer p {
+  color: #555;
+  margin-bottom: 1.5rem;
+  font-style: italic;
+}
+
+.reservation-button {
+  background-color: #d2226e;
+  color: white;
+  border: none;
+  padding: 1rem 2.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(210, 34, 110, 0.3);
+}
+
+.reservation-button:hover {
+  background-color: #b01b5e;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(210, 34, 110, 0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .menu-container {
+    padding: 2rem 1rem;
+  }
+  
+  .menu-header h1 {
+    font-size: 2rem;
+  }
+  
+  .menu-item {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .item-description {
+    max-width: 100%;
+  }
+  
+  .item-price {
+    margin-left: 0;
+    align-self: flex-end;
+  }
+}
