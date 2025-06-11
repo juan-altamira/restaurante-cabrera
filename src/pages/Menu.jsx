@@ -1,6 +1,12 @@
+import { useNavigate } from 'react-router-dom';
 import './Menu.css';
 
 const Menu = () => {
+  const navigate = useNavigate();
+
+  const handleReservationClick = () => {
+    navigate('/reservations');
+  };
   const menuSections = [
     {
       title: 'ENTRADAS',
@@ -100,7 +106,9 @@ const Menu = () => {
 
       <div className="menu-footer">
         <p>Consultar por nuestro menú de postres y vinos</p>
-        <button className="reservation-button">RESERVAR MESA</button>
+        <button className="reservation-button" onClick={handleReservationClick}>
+          RESERVAR MESA
+        </button>
       </div>
     </div>
   );

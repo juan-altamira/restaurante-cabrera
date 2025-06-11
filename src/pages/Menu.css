@@ -78,13 +78,7 @@
   /* Se eliminaron los estilos de hover */
 }
 
-.menu-item::before {
-  content: '•';
-  color: #d2226e;
-  position: absolute;
-  left: 0;
-  opacity: 1;
-}
+/* Se eliminó el punto rosa que aparecía antes de cada ítem */
 
 .item-info {
   grid-column: 1;
