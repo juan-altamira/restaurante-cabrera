@@ -2,6 +2,7 @@ import { useState } from 'react';
 import './Reservations.css';
 
 const Reservations = () => {
+  // Agregamos la clase dark-bg al contenedor principal para asegurar contraste en el texto
   const [form, setForm] = useState({ 
     name: '', 
     email: '', 
@@ -62,7 +63,7 @@ const Reservations = () => {
   }
 
   return (
-    <div className="reservations-container">
+    <div className="reservations-container dark-bg" style={{ backgroundColor: '#1a1a1a' }}>
       <div className="reservations-header">
         <h1>RESERVAS</h1>
         <p className="subtitle">Reserva tu mesa en nuestro restaurante</p>

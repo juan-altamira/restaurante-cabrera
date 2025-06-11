@@ -73,7 +73,7 @@ const Menu = () => {
   ];
 
   return (
-    <div className="menu-container">
+    <div className="menu-container dark-bg" style={{ backgroundColor: '#1a1a1a' }}>
       <div className="menu-header">
         <h1>NUESTRO MENÚ</h1>
         <p className="menu-subtitle">Sabores auténticos de la parrilla argentina</p>

@@ -3,6 +3,7 @@ import { FaMapMarkerAlt, FaPhone, FaEnvelope, FaClock } from 'react-icons/fa';
 import './Contact.css';
 
 const Contact = () => {
+  // Agregamos la clase dark-bg al contenedor principal para asegurar contraste en el texto
   const [form, setForm] = useState({ 
     name: '', 
     email: '', 
@@ -83,7 +84,7 @@ const Contact = () => {
   }
 
   return (
-    <div className="contact-container">
+    <div className="contact-container dark-bg" style={{ backgroundColor: '#1a1a1a' }}>
       <div className="contact-header">
         <h1>CONTÁCTANOS</h1>
         <p className="subtitle">Estamos aquí para responder a tus consultas</p>

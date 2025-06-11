@@ -60,10 +60,16 @@ label {
   display: block;
   margin-bottom: 0.5rem;
   font-weight: 500;
-  color: #444;
+  color: #e0e0e0; /* Color más claro para mejor contraste */
   font-size: 0.9rem;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+}
+
+/* Estilos para placeholders */
+::placeholder {
+  color: #999; /* Color más claro para mejor contraste */
+  opacity: 1;
 }
 
 input[type="text"],
@@ -74,20 +80,28 @@ select,
 textarea {
   width: 100%;
   padding: 0.8rem 1rem;
-  border: 1px solid #ddd;
+  border: 1px solid #555; /* Borde más oscuro para mejor contraste */
   border-radius: 4px;
   font-size: 1rem;
   transition: all 0.3s ease;
-  background-color: #f9f9f9;
+  background-color: #2d2d2d; /* Fondo más oscuro para mejor contraste */
+  color: #fff; /* Texto blanco para mejor contraste */
+}
+
+/* Estilo para los placeholders */
+input::placeholder,
+textarea::placeholder {
+  color: #aaa; /* Color más claro para los placeholders */
 }
 
 input:focus,
 select:focus,
 textarea:focus {
   outline: none;
-  border-color: #d2226e;
-  box-shadow: 0 0 0 2px rgba(210, 34, 110, 0.2);
-  background-color: white;
+  border-color: #ff4d94; /* Color más claro para mejor contraste */
+  box-shadow: 0 0 0 2px rgba(255, 77, 148, 0.3);
+  background-color: #3a3a3a; /* Fondo ligeramente más claro al hacer focus */
+  color: #fff; /* Asegurar que el texto sea blanco */
 }
 
 textarea {
@@ -129,9 +143,11 @@ select {
 }
 
 .submit-button:hover:not(:disabled) {
-  background-color: #b01b5e;
+  background-color: #ff4d94; /* Color más claro al hacer hover */
+  color: #fff;
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(210, 34, 110, 0.4);
+  box-shadow: 0 6px 20px rgba(255, 77, 148, 0.6);
+  border-color: #ff4d94; /* Mismo color que el fondo para consistencia */
 }
 
 .submit-button:disabled {
