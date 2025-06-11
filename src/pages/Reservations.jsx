@@ -204,10 +204,6 @@ const Reservations = () => {
           <div className="location">
             <h3>Ubicación</h3>
             <p>Cabrera 5099, Palermo, CABA</p>
-            <div className="map-placeholder">
-              {/* Aquí iría un iframe de Google Maps */}
-              <p>Mapa del lugar</p>
-            </div>
           </div>
         </div>
       </div>

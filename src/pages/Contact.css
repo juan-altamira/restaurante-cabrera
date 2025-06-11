@@ -37,6 +37,124 @@
   padding: 0 2rem;
 }
 
+/* Estilos responsivos para la página de contacto */
+@media (max-width: 992px) {
+  .contact-content {
+    grid-template-columns: 1fr;
+    max-width: 800px;
+    margin: 3rem auto;
+    padding: 0 1.5rem;
+  }
+  
+  .contact-form-container,
+  .contact-info-container {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-content {
+    margin: 2rem auto;
+    padding: 0 1rem;
+    gap: 2rem;
+  }
+  
+  .contact-form-container h2,
+  .contact-info h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-group {
+    margin-bottom: 1.2rem;
+  }
+  
+  .form-group label {
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 0.8rem;
+    font-size: 0.95rem;
+  }
+  
+  .submit-button {
+    padding: 0.9rem 1.8rem;
+    font-size: 0.95rem;
+  }
+  
+  .contact-detail {
+    padding: 0.8rem 0;
+  }
+  
+  .contact-detail h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.3rem;
+  }
+  
+  .contact-detail p,
+  .contact-detail a {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-content {
+    margin: 1.5rem auto;
+    padding: 0 1rem;
+  }
+  
+  .contact-form-container h2,
+  .contact-info h2 {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+  
+  .contact-description {
+    text-align: center;
+    padding: 1rem 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-group {
+    margin-bottom: 1rem;
+  }
+  
+  .form-group label {
+    font-size: 0.9rem;
+  }
+  
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 0.7rem;
+    font-size: 0.9rem;
+  }
+  
+  .submit-button {
+    width: 100%;
+    padding: 0.9rem;
+    font-size: 1rem;
+  }
+  
+  .contact-detail {
+    text-align: center;
+  }
+  
+  .contact-detail h3 {
+    font-size: 1.1rem;
+  }
+  
+  .contact-detail p,
+  .contact-detail a {
+    font-size: 0.9rem;
+  }
+}
+
 /* Formulario de contacto */
 .contact-form-container {
   padding: 2rem;
@@ -160,11 +278,18 @@ select {
 
 /* Información de contacto */
 .contact-info-container {
-  background-color: #f8f8f8;
+  background-color: #fff;
   padding: 2.5rem;
-  border-radius: 8px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.03);
+  border-radius: 10px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
   align-self: flex-start;
+  border: 1px solid #f0f0f0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-info-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
 }
 
 .contact-info h2 {
@@ -186,55 +311,151 @@ select {
 }
 
 .contact-description {
-  color: #666;
-  line-height: 1.6;
-  margin-bottom: 2rem;
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 2.5rem;
+  font-size: 1.05rem;
+  padding: 1.2rem;
+  background-color: #f9f9f9;
+  border-radius: 0 4px 4px 0;
+}
+
+.contact-separator {
+  border: none;
+  border-top: 1px solid rgba(210, 34, 110, 0.3);
+  margin: 1.2rem 0;
+  width: 100%;
+  opacity: 0.6;
 }
 
 .contact-details {
-  margin: 2.5rem 0;
+  margin: 1.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
 }
 
 .contact-detail {
   display: flex;
-  margin-bottom: 1.5rem;
   align-items: flex-start;
+  width: 100%;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid rgba(210,34,110,0.1);
+  margin: 0;
+  transition: all 0.3s ease;
+}
+
+.contact-detail:last-child {
+  border-bottom: none;
+}
+
+.contact-text {
+  display: block;
+  width: 100%;
+  padding-left: 1rem;
+  margin: 0;
+}
+
+.contact-text h3 {
+  font-size: 1rem;
+  color: #333;
+  margin: 0 0 0.2rem 0;
+  font-weight: 600;
+}
+
+.contact-text p,
+.contact-text a {
+  display: block;
+  color: #666;
+  margin: 0;
+  line-height: 1.4;
+  font-size: 0.95rem;
+}
+
+.contact-text a {
+  color: #d2226e;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.contact-text a:hover {
+  text-decoration: underline;
+}
+
+.contact-detail:last-child {
+  border-bottom: none;
+}
+
+.contact-detail:hover {
+  background-color: #fcfcfc;
+  padding-left: 0.5rem;
 }
 
 .contact-icon-container {
   background-color: rgba(210, 34, 110, 0.1);
-  width: 50px;
-  height: 50px;
+  min-width: 44px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: 1.2rem;
   flex-shrink: 0;
+  margin-right: 1rem;
+  margin-top: 0.2rem;
 }
 
 .contact-icon {
   color: #d2226e;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 
 .contact-text h3 {
-  margin: 0 0 0.3rem;
+  margin: 0 0 0.5rem 0;
+  color: #222;
   font-size: 1.1rem;
-  color: #333;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  color: #d2226e;
 }
 
 .contact-text p,
 .contact-text a {
   margin: 0;
-  color: #666;
-  line-height: 1.5;
+  color: #444;
+  line-height: 1.6;
+  font-size: 1rem;
+  font-weight: 400;
+  transition: color 0.2s ease;
+}
+
+.contact-text a {
+  color: #d2226e;
   text-decoration: none;
-  transition: color 0.3s ease;
+  position: relative;
+  display: inline-block;
+}
+
+.contact-text a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: #d2226e;
+  transition: width 0.3s ease;
 }
 
 .contact-text a:hover {
-  color: #d2226e;
+  color: #b01b5e;
+}
+
+.contact-text a:hover::after {
+  width: 100%;
 }
 
 /* Redes sociales */

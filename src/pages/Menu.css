@@ -1,8 +1,9 @@
 .menu-container {
-  max-width: 1200px;
+  max-width: 1100px;
   margin: 0 auto;
-  padding: 4rem 1rem;
+  padding: 3rem 1.5rem;
   font-family: 'Montserrat', sans-serif;
+  color: #333;
 }
 
 .menu-header {
@@ -11,11 +12,26 @@
 }
 
 .menu-header h1 {
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   color: #222;
-  margin-bottom: 1rem;
+  margin: 0 auto 0.8rem;
   text-transform: uppercase;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
+  font-weight: 700;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+.menu-header h1::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #d2226e;
 }
 
 .menu-subtitle {
@@ -33,13 +49,14 @@
 }
 
 .section-title {
-  font-size: 1.5rem;
-  color: #d2226e;
+  font-size: 1.4rem;
+  color: #222;
   text-transform: uppercase;
-  letter-spacing: 2px;
-  margin-bottom: 1.5rem;
+  letter-spacing: 1.5px;
+  margin: 2.5rem 0 1.5rem;
   padding-bottom: 0.5rem;
   border-bottom: 2px solid #f0f0f0;
+  font-weight: 600;
 }
 
 .menu-items {
@@ -48,39 +65,64 @@
 }
 
 .menu-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.5rem 1rem;
   padding: 1rem 0;
-  border-bottom: 1px dashed #e0e0e0;
-  transition: transform 0.3s ease;
+  border-bottom: 1px solid #f0f0f0;
+  transition: all 0.3s ease;
+  position: relative;
 }
 
 .menu-item:hover {
-  transform: translateX(10px);
+  background-color: #fff9fb;
+  padding-left: 10px;
+  border-radius: 4px;
+}
+
+.menu-item::before {
+  content: '•';
+  color: #d2226e;
+  position: absolute;
+  left: -15px;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.menu-item:hover::before {
+  left: 0;
+  opacity: 1;
+}
+
+.item-info {
+  grid-column: 1;
 }
 
 .item-info h3 {
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   color: #333;
-  margin: 0 0 0.5rem 0;
+  margin: 0 0 0.3rem 0;
   font-weight: 600;
+  line-height: 1.3;
 }
 
 .item-description {
-  color: #777;
+  color: #666;
   font-size: 0.9rem;
   margin: 0;
   line-height: 1.5;
-  max-width: 80%;
+  font-weight: 400;
 }
 
 .item-price {
   font-weight: 700;
   color: #d2226e;
-  font-size: 1.1rem;
+  font-size: 1rem;
   white-space: nowrap;
-  margin-left: 1rem;
+  grid-column: 2;
+  grid-row: 1;
+  text-align: right;
+  padding-top: 2px;
 }
 
 .menu-footer {
@@ -124,20 +166,52 @@
   }
   
   .menu-header h1 {
-    font-size: 2rem;
+    font-size: 1.8rem;
+    padding-bottom: 8px;
+  }
+  
+  .menu-header h1::after {
+    width: 80px;
+    height: 2px;
+  }
+  
+  .section-title {
+    font-size: 1.2rem;
+    margin: 2rem 0 1.2rem;
   }
   
   .menu-item {
-    flex-direction: column;
-    gap: 0.5rem;
+    grid-template-columns: 1fr auto;
+    padding: 0.8rem 0;
+  }
+  
+  .item-info h3 {
+    font-size: 1rem;
   }
   
   .item-description {
-    max-width: 100%;
+    font-size: 0.85rem;
+    line-height: 1.4;
   }
   
   .item-price {
-    margin-left: 0;
-    align-self: flex-end;
+    font-size: 0.95rem;
+    grid-row: 1;
+    text-align: right;
+  }
+}
+
+@media (max-width: 480px) {
+  .menu-item {
+    grid-template-columns: 1fr;
+    gap: 0.3rem;
+  }
+  
+  .item-price {
+    grid-column: 1;
+    grid-row: 2;
+    text-align: left;
+    padding-top: 0;
+    padding-bottom: 0.5rem;
   }
 }

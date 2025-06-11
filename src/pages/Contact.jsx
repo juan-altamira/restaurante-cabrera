@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { FaMapMarkerAlt, FaPhone, FaEnvelope, FaClock, FaFacebook, FaInstagram } from 'react-icons/fa';
+import { FaMapMarkerAlt, FaPhone, FaEnvelope, FaClock } from 'react-icons/fa';
 import './Contact.css';
 
 const Contact = () => {
@@ -175,46 +175,45 @@ const Contact = () => {
         </div>
 
         <div className="contact-info-container">
-          <div className="contact-info">
-            <h2>Información de contacto</h2>
-            <p className="contact-description">
-              Estamos disponibles para responder tus consultas y recibir tus comentarios. 
-              No dudes en contactarnos a través de cualquiera de estos canales.
-            </p>
-
-            <div className="contact-details">
-              {contactInfo.map((item, index) => (
-                <div key={index} className="contact-detail">
-                  <div className="contact-icon-container">
-                    {item.icon}
-                  </div>
-                  <div className="contact-text">
-                    <h3>{item.title}</h3>
-                    {item.isLink ? (
-                      <a href={item.link} target="_blank" rel="noopener noreferrer">
-                        {item.content}
-                      </a>
-                    ) : (
-                      <p style={{ whiteSpace: 'pre-line' }}>{item.content}</p>
-                    )}
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            <div className="social-media">
-              <h3>Síguenos</h3>
-              <div className="social-icons">
-                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-                  <FaFacebook className="social-icon" />
-                </a>
-                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                  <FaInstagram className="social-icon" />
-                </a>
-              </div>
-            </div>
-          </div>
+  <div className="contact-info-box1">
+    <h2>Información de contacto</h2>
+  </div>
+  <div className="contact-separator"></div>
+  <div className="contact-info-box2">
+    <p className="contact-description">
+      Estamos disponibles para responder tus consultas y recibir tus comentarios. No dudes en contactarnos a través de cualquiera de estos canales.
+    </p>
+  </div>
+  <div className="contact-separator"></div>
+  <div className="contact-info-box3">
+    <div className="contact-details">
+      <div className="contact-detail">
+        <div className="contact-text">
+          <h3>Dirección</h3>
+          <p>Cabrera 5099, Palermo, CABA, Argentina</p>
         </div>
+      </div>
+      <div className="contact-detail">
+        <div className="contact-text">
+          <h3>Teléfono</h3>
+          <a href="tel:+541168754000">(+54 9 11) 6875-4000</a>
+        </div>
+      </div>
+      <div className="contact-detail">
+        <div className="contact-text">
+          <h3>Email</h3>
+          <a href="mailto:info@lacabrera.com.ar">info@lacabrera.com.ar</a>
+        </div>
+      </div>
+      <div className="contact-detail">
+        <div className="contact-text">
+          <h3>Horario de atención</h3>
+          <p>Lunes a Domingo<br />12:00 - 15:30 hs / 20:00 - 23:30 hs</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
       </div>
 
       <div className="map-container">
