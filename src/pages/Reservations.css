@@ -4,6 +4,9 @@
   margin: 0 auto;
   padding: 4rem 1rem;
   font-family: 'Montserrat', sans-serif;
+  background-color: #1a1a1a;
+  min-height: 100vh;
+  color: #e0e0e0;
 }
 
 .reservations-header {
@@ -13,7 +16,7 @@
 
 .reservations-header h1 {
   font-size: 2.5rem;
-  color: #222;
+  color: #fff;
   margin-bottom: 1rem;
   text-transform: uppercase;
   letter-spacing: 3px;
@@ -21,7 +24,7 @@
 
 .subtitle {
   font-size: 1.2rem;
-  color: #777;
+  color: #aaa;
   font-style: italic;
 }
 
@@ -30,10 +33,11 @@
   display: grid;
   grid-template-columns: 1.5fr 1fr;
   gap: 3rem;
-  background: white;
+  background: #1e1e1e;
   border-radius: 8px;
-  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
   overflow: hidden;
+  border: 1px solid #333;
 }
 
 /* Estilos del formulario */
@@ -60,10 +64,11 @@ label {
   display: block;
   margin-bottom: 0.5rem;
   font-weight: 500;
-  color: #e0e0e0; /* Color más claro para mejor contraste */
+  color: #333; /* Color más oscuro para mejor contraste */
   font-size: 0.9rem;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+  font-weight: 600; /* Texto más grueso para mejor legibilidad */
 }
 
 /* Estilos para placeholders */
@@ -84,8 +89,9 @@ textarea {
   border-radius: 4px;
   font-size: 1rem;
   transition: all 0.3s ease;
-  background-color: #2d2d2d; /* Fondo más oscuro para mejor contraste */
-  color: #fff; /* Texto blanco para mejor contraste */
+  background-color: #fff; /* Fondo blanco para mejor contraste */
+  color: #333; /* Texto oscuro para mejor legibilidad */
+  border: 2px solid #ddd; /* Borde más suave */
 }
 
 /* Estilo para los placeholders */
@@ -100,8 +106,9 @@ textarea:focus {
   outline: none;
   border-color: #ff4d94; /* Color más claro para mejor contraste */
   box-shadow: 0 0 0 2px rgba(255, 77, 148, 0.3);
-  background-color: #3a3a3a; /* Fondo ligeramente más claro al hacer focus */
-  color: #fff; /* Asegurar que el texto sea blanco */
+  background-color: #fff; /* Mantener fondo blanco al hacer focus */
+  color: #333; /* Texto oscuro */
+  border-color: #d2226e; /* Color de borde al hacer focus */
 }
 
 textarea {
@@ -158,25 +165,28 @@ select {
 
 .reservation-note {
   font-size: 0.8rem;
-  color: #777;
+  color: #aaa; /* Color más claro para mejor contraste en tema oscuro */
   text-align: center;
   margin-top: 1.5rem;
   font-style: italic;
+  line-height: 1.5;
 }
 
 /* Sección de información */
 .reservation-info {
-  background-color: #f8f8f8;
+  background-color: #242424;
   padding: 2.5rem;
-  border-left: 1px solid #eee;
+  border-left: 1px solid #333;
+  box-shadow: -2px 0 10px rgba(0,0,0,0.3);
 }
 
 .reservation-info h3 {
-  color: #333;
-  font-size: 1.2rem;
-  margin-bottom: 1.2rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 2px solid #eee;
+  color: #fff;
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 2px solid #444;
+  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
@@ -205,7 +215,7 @@ select {
   margin: 0.3rem 0;
   display: flex;
   align-items: center;
-  color: #555;
+  color: #ccc;
   width: 100%;
   justify-content: flex-start;
 }
@@ -232,13 +242,13 @@ select {
 
 .map-placeholder {
   height: 200px;
-  background-color: #eee;
+  background-color: #333;
   border-radius: 4px;
   margin-top: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #777;
+  color: #aaa;
   font-style: italic;
 }
 

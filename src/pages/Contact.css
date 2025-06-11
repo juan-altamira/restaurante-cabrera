@@ -3,19 +3,20 @@
   max-width: 100%;
   margin: 0 auto;
   font-family: 'Montserrat', sans-serif;
-  color: #333;
+  color: #e0e0e0;
+  background-color: #1a1a1a;
 }
 
 /* Encabezado */
 .contact-header {
   text-align: center;
   padding: 4rem 1rem 2rem;
-  background-color: #f9f9f9;
+  background-color: #1e1e1e;
 }
 
 .contact-header h1 {
   font-size: 2.5rem;
-  color: #222;
+  color: #fff;
   margin-bottom: 0.5rem;
   text-transform: uppercase;
   letter-spacing: 3px;
@@ -23,7 +24,7 @@
 
 .subtitle {
   font-size: 1.2rem;
-  color: #777;
+  color: #aaa;
   font-style: italic;
 }
 
@@ -118,6 +119,8 @@
     text-align: center;
     padding: 1rem 0.5rem;
     margin-bottom: 1.5rem;
+    background-color: #242424;
+    color: #e0e0e0;
   }
   
   .form-group {
@@ -197,7 +200,7 @@ label {
   display: block;
   margin-bottom: 0.5rem;
   font-weight: 500;
-  color: #444;
+  color: #e0e0e0;
   font-size: 0.9rem;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -278,12 +281,13 @@ select {
 
 /* Información de contacto */
 .contact-info-container {
-  background-color: #fff;
+  background-color: #1e1e1e;
   padding: 2.5rem;
   border-radius: 10px;
-  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+  border: 1px solid #333;
   align-self: flex-start;
-  border: 1px solid #f0f0f0;
+  border: 1px solid #333;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -311,13 +315,14 @@ select {
 }
 
 .contact-description {
-  color: #555;
+  color: #e0e0e0;
   line-height: 1.7;
   margin-bottom: 2.5rem;
   font-size: 1.05rem;
   padding: 1.2rem;
-  background-color: #f9f9f9;
-  border-radius: 0 4px 4px 0;
+  background-color: #242424;
+  border-radius: 4px;
+  border-left: 3px solid #ff4d94;
 }
 
 .contact-separator {
@@ -341,7 +346,7 @@ select {
   align-items: flex-start;
   width: 100%;
   padding: 0.8rem 0;
-  border-bottom: 1px solid rgba(210,34,110,0.1);
+  border-bottom: 2px solid #444;
   margin: 0;
   transition: all 0.3s ease;
 }
@@ -359,7 +364,7 @@ select {
 
 .contact-text h3 {
   font-size: 1rem;
-  color: #333;
+  color: #fff;
   margin: 0 0 0.2rem 0;
   font-weight: 600;
 }
@@ -367,20 +372,23 @@ select {
 .contact-text p,
 .contact-text a {
   display: block;
-  color: #666;
+  color: #ccc;
   margin: 0;
   line-height: 1.4;
   font-size: 0.95rem;
 }
 
 .contact-text a {
-  color: #d2226e;
+  color: #f5f5dc; /* Color crema claro */
   text-decoration: none;
-  transition: color 0.2s;
+  transition: all 0.2s ease;
+  font-weight: 500;
 }
 
 .contact-text a:hover {
+  color: #fff; /* Blanco puro al hacer hover */
   text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 .contact-detail:last-child {
@@ -388,12 +396,12 @@ select {
 }
 
 .contact-detail:hover {
-  background-color: #fcfcfc;
+  background-color: #333;
   padding-left: 0.5rem;
 }
 
 .contact-icon-container {
-  background-color: rgba(210, 34, 110, 0.1);
+  background-color: rgba(255, 77, 148, 0.2);
   min-width: 44px;
   width: 44px;
   height: 44px;

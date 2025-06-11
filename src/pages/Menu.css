@@ -74,22 +74,14 @@
   position: relative;
 }
 
-.menu-item:hover {
-  background-color: #fff9fb;
-  padding-left: 10px;
-  border-radius: 4px;
+.menu-item {
+  /* Se eliminaron los estilos de hover */
 }
 
 .menu-item::before {
   content: '•';
   color: #d2226e;
   position: absolute;
-  left: -15px;
-  opacity: 0;
-  transition: all 0.3s ease;
-}
-
-.menu-item:hover::before {
   left: 0;
   opacity: 1;
 }
@@ -153,11 +145,7 @@
   box-shadow: 0 4px 15px rgba(210, 34, 110, 0.3);
 }
 
-.reservation-button:hover {
-  background-color: #b01b5e;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(210, 34, 110, 0.4);
-}
+/* Se eliminó el hover del botón de reserva */
 
 /* Responsive Design */
 @media (max-width: 768px) {
